@@ -1,6 +1,6 @@
 # RAG-using-Azure-Databricks-CI-CD
 
-[Ayush Jayendra Patel](https://github.com/Ayush-Patel-10) [Bharath Raju Palla](https://github.com/BharathRajuPalla) [Harsha Bhargav Yarramsetty](https://github.com/Harsha-Bhargav) [Luv Verma](https://github.com/luv91) [Shivali Katharia](https://github.com/ShivaliKatharia) [Spandan Maaheshwari](https://github.com/s8m21)
+[Ayush Patel](https://github.com/Ayush-Patel-10) [Bharath Palla](https://github.com/BharathRajuPalla) [Harsha Yarramsetty](https://github.com/Harsha-Bhargav) [Luv Verma](https://github.com/luv91) [Shivali Katharia](https://github.com/ShivaliKatharia) [Spandan Maaheshwari](https://github.com/s8m21)
 
 # Introduction
 
