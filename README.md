@@ -1,18 +1,24 @@
 # RAG-using-Azure-Databricks-CI-CD
 
-[Ayush Patel](https://github.com/Ayush-Patel-10) [Bharath Palla](https://github.com/BharathRajuPalla) [Harsha Yarramsetty](https://github.com/Harsha-Bhargav) [Luv Verma](https://github.com/luv91) [Shivali Katharia](https://github.com/ShivaliKatharia) [Spandan Maaheshwari](https://github.com/s8m21)
+- [Ayush Patel](https://github.com/Ayush-Patel-10)
+- [Bharath Palla](https://github.com/BharathRajuPalla)
+- [Harsha Yarramsetty](https://github.com/Harsha-Bhargav)
+- [Luv Verma](https://github.com/luv91)
+- [Shivali Katharia](https://github.com/ShivaliKatharia)
+- [Spandan Maaheshwari](https://github.com/s8m21)
 
 # Introduction
 
 
 
+## Project Architecture
 
 ![llmops_1](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/717de3ce-02c2-4efc-acc2-42d6529bdf7c)
 
 
 
 
-# Project Overview for RAG-using-Azure-Databricks-CI-CD
+## Project Overview
 
 This repository houses the `RAG-using-Azure-Databricks-CI-CD` project, which demonstrates a comprehensive MLOps pipeline encompassing development, production, and monitoring within an Azure Databricks environment.
 
