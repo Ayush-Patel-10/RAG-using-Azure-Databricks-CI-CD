@@ -52,21 +52,21 @@ The project’s folder structure in Databricks is designed to separate files and
 ## Databricks Workflow
 We maintain a detailed workflow for model training, evaluation, and deployment within Databricks, ensuring systematic testing and deployment of our models.
 
-[Explore the Databricks workflow](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/blob/read/README/README_DATABRICKS_WORKFLOW.md)
+[Explore the Databricks workflow](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/blob/main/README/README_DATABRICKS_WORKFLOW.md)
 
 ## Model Version Rollback
 Our process for rolling back to previous model versions in production is documented to ensure reliability and ease of transitions.
 
-[Learn about model version rollback](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/blob/read/README/README_MODEL_VERSION_ROLLBACK.md)
+[Learn about model version rollback](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/blob/main/README/README_MODEL_VERSION_ROLLBACK.md)
 
 ## MLFlow
 MLFlow is integral to our pipeline, providing tools for model versioning, management, and serving in both test and production environments.
 
-[Read about our MLFlow setup](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/blob/read/README/README_MLFlow.md)
+[Read about our MLFlow setup](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/blob/main/README/README_MLFlow.md)
 
 ## Terraform
 Terraform is used for infrastructure provisioning and state management within our Databricks environment.
 
-[Review our Terraform practices](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/blob/read/README/README_TERRAFORM_TFSTATE.md)
+[Review our Terraform practices](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/blob/main/README/README_TERRAFORM_TFSTATE.md)
 
 
