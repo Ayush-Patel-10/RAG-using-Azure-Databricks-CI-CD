@@ -47,7 +47,7 @@ We conduct a thorough cost analysis to optimize resource allocation and manage e
 ## Databricks Folder Structure
 The project’s folder structure in Databricks is designed to separate files and artifacts across the test, staging, and prod environments, facilitating organized development and deployment.
 
-[Understand our Databricks folder structure](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/blob/read/README/README_DATABRICKS_FOLDER_STRUCTURE.md)
+[Understand our Databricks folder structure](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/blob/main/README/README_DATABRICKS_FOLDER_STRUCTURE.md)
 
 ## Databricks Workflow
 We maintain a detailed workflow for model training, evaluation, and deployment within Databricks, ensuring systematic testing and deployment of our models.
