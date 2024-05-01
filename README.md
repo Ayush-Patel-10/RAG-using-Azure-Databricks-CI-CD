@@ -9,13 +9,11 @@
 
 # Introduction
 
-
+This project leverages the Retrieval-Augmented Generation (RAG) framework which we are incorporating within our chatbot on Azure Databricks. This approach ensures our chatbot delivers responses that are relevant and contextually precise, while also enabling continuous integration and deployment for streamlined development and updates. This model, integrated within a serverless architecture and supported by Delta Tables for secure data storage and enhances the chatbot's efficiency and scalability while ensuring stringent data security and compliance. Employing MLFlow for lifecycle management further ensures that each model iteration is meticulously tracked and documented, we have leveraged MLFlow's LLM-as-a-judge for evaluating our RAG chatbot. 
 
 ## Project Architecture
 
 ![llmops_1](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/717de3ce-02c2-4efc-acc2-42d6529bdf7c)
-
-
 
 
 ## Project Overview
