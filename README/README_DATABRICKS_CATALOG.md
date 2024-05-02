@@ -33,10 +33,6 @@ The `databricks_pdf_documentation` table is a managed table designed to hold met
   - `delta.minWriterVersion=6`
   - `delta.enableChangeDataFeed=true`
   - `delta.minReaderVersion=1`
-- **Generation**: 2
-- **Created At**: 4/19/2024, 2:24:44 AM
-- **Created By**: maaheshwarispandan97@outlook.com
-- **Table Id**: 8f41e694-e5f6-4b06-abe3-a046fe4cc388
 
 ### Schema
 The table consists of the following columns:
