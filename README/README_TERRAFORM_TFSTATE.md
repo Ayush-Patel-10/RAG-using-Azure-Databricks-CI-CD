@@ -1,7 +1,7 @@
-# Terraform State Overview for the my_mlops_project_luv_v6 Project
+# Terraform State Overview for the LLMOps Project
 
 ## Introduction
-This document delineates the Terraform state management for the `my_mlops_project_luv_v6` project. It covers resource management and infrastructure provisioning within the Databricks environment.
+This document delineates the Terraform state management for the `LLMOps` project. It covers resource management and infrastructure provisioning within the Databricks environment.
 
 ## Terraform Details
 - **Version**: 1.5.5
@@ -10,7 +10,7 @@ This document delineates the Terraform state management for the `my_mlops_projec
 
 The Terraform state file (`terraform.tfstate`) is pivotal for tracking the state of resources, their metadata, and the configuration mapping to the real-world cloud environment.
 
-![image](https://github.com/luv91/my_mlops_project_luv_v6/assets/10795176/24a97ff3-1e7e-4c49-b3eb-923d54c1000f)
+![1](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/73ea0928-daab-408a-9e37-a5c5e6fe3639)
 
 
 ## Managed Resources
@@ -53,8 +53,8 @@ The Terraform state file (`terraform.tfstate`) is pivotal for tracking the state
 
 ## Metadata and Deployment
 
-- **Metadata File Path**: `/Users/maaheshwarispandan97@outlook.com/.bundle/my_mlops_project_luv_v6/prod/state/metadata.json`
-- **Model Function Identifier**: `prod.my_mlops_project_luv_v6.my_mlops_project_luv_v6-model`
+- **Metadata File Path**: `/Users/maaheshwarispandan97@outlook.com/.bundle/LLMOps/prod/state/metadata.json`
+- **Model Function Identifier**: `prod.LLMOps.LLMOps-model`
 
 ## Additional Notes
 
