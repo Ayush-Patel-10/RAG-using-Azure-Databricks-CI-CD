@@ -50,7 +50,7 @@ This table provides a detailed overview of each workflow file in the `.github/wo
 - **Activity**: Manages the deployment of project bundles to the staging environment.
 - **Details**: Includes steps to validate and deploy the bundle configurations in the staging environment, ensuring the deployment's readiness.
   
-![staging](https://github.com/luv91/my_mlops_project_luv_v6/assets/10795176/7b4b99fb-5802-40dc-b1a7-c63db2bd2c02)
+![image 4](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/127258950/7c04482a-1edd-4ff7-851e-4847ca86de57)
 
 ### Final Review and Merge to Release:
 - **Activity**: After staging deployment and final validations, a pull request from `main` to `release` is created.
@@ -62,7 +62,7 @@ This table provides a detailed overview of each workflow file in the `.github/wo
 - **Activity**: Manages the deployment of project bundles to the production environment.
 - **Details**: Validates the bundle for production settings and deploys it, followed by running the actual production-level tasks (such as data processing or model training tasks defined in the Databricks notebooks).
 
-![prod-deploy](https://github.com/luv91/my_mlops_project_luv_v6/assets/10795176/d8790f36-0600-410e-9e3a-9e7424e87583)
+![image 5](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/127258950/685f646d-3022-4672-961f-c6babf188775)
 
 ## [Model Training Workflows Overview](https://github.com/luv91/my_mlops_project_luv_v6/blob/read/my_mlops_project_luv_v6/resources/model-workflow-resource.yml)
 
