@@ -195,4 +195,4 @@ prod_predictions = loaded_model.predict(prod_data)
 
 ## Model Version Rollback
 
-It is possible to revert to a previous version of a model in the production environment using MLFlow. For detailed steps on how to perform a model rollback, please refer to our [Model Version Rollback Guide](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/blob/read/README/README_MODEL_VERSION_ROLLBACK.md).
+It is possible to revert to a previous version of a model in the production environment using MLFlow. For detailed steps on how to perform a model rollback, please refer to our [Model Version Rollback Guide](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/README/README_MODEL_VERSION_ROLLBACK.md).
