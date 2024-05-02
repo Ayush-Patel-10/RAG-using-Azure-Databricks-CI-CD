@@ -22,7 +22,6 @@ Within the `.bundle` directory, the production environment is structured into se
 ## Detailed Folder Structure
 Below is the repository structure outlining the key directories and files within the `.bundle` directory.
 
-.bundle/
 ```plaintext
 .bundle/
 │
