@@ -33,8 +33,8 @@ This table provides a detailed overview of each workflow file in the `.github/wo
 - **Trigger**: Pull requests.
 - **Activity**: Validates the MLOps bundle configurations, ensuring all integration settings conform to required standards.
 - **Details**: Checks configurations across all branches involved but primarily focuses on updates to the main branch. Includes validation steps that check both staging and production configurations to ensure consistency and readiness before deployment.
-- 
-![bundle-ci](https://github.com/luv91/my_mlops_project_luv_v6/assets/10795176/e3fc4dfe-8809-484e-9eb7-3ded89343757)
+
+![image 2](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/127258950/f74171c1-5ee7-4758-b472-963c524c841d)
 
 ### Testing:
 - **Workflow**: `my_mlops_project_luv_v6-run-tests.yml`
