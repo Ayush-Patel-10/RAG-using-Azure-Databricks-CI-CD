@@ -45,7 +45,6 @@ With a resource group ready, proceed to create a Databricks workspace:
 5. **Access Your Databricks Workspace**: Navigate to "All resources", find your Databricks workspace, and click to open it.
 <img width="1091" alt="image" src="https://github.com/luv91/my_mlops_project_luv_v6/assets/156069267/c0eb274e-32f9-4ad6-90b3-2cf02fffef0c">
 
-![alt text](image.png)
 
 ### 4.1. Meta Store Creation Inside Databricks
 
