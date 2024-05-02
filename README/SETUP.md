@@ -32,7 +32,10 @@ To create an ADLS Gen2:
 3. **Select Account Type**: In the "Advanced" tab, enable "Hierarchical namespace".
 4. **Review and Create**: Adjust the remaining settings as necessary, then click "Review + Create" and "Create".
 5. **Access and Configure the Storage Account**: Navigate to your storage account from the Azure Portal to manage settings.
-<img width="1075" alt="image" src="https://github.com/luv91/my_mlops_project_luv_v6/assets/156069267/94106490-f79c-4298-9c14-ac7bcfd5ca2e">
+
+![1](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/506b0681-e248-4653-bbb1-d66d4d082f50)
+
+
 
 ## Step 4: Databricks Workspace Creation inside Resource Group
 
