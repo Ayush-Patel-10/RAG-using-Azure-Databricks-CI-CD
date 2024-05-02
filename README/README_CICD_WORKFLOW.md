@@ -21,8 +21,7 @@ This table provides a detailed overview of each workflow file in the `.github/wo
 - **Activity**: Once development is completed in the `dev` branch, a pull request is created to merge the changes into the `main` branch.
 - **Details**: This triggers several checks and workflows.
   
-![files-running-on-dev-to-main-pull-request](https://github.com/luv91/my_mlops_project_luv_v6/assets/10795176/d5214700-df39-4bfa-bf4b-3e0e56db38af)
-
+![image 1](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/127258950/5ccef997-93c1-4576-9a9a-d2881e25edc1)
 
 ### Code Linting:
 - **Workflow**: `lint-cicd-workflow-files.yml`
