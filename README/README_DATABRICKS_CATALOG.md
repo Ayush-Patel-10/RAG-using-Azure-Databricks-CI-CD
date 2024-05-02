@@ -19,7 +19,7 @@ The 8 Tables are shown below:
 
 ![image 3](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/127258950/f2069ecd-8c67-418a-800d-39f7fa5802d8)
 
-## Table 1: `prod.my_mlops_project_luv_v6.databricks_pdf_documentation`
+## Table 1: `prod.LLMOps.databricks_pdf_documentation`
 
 ### Overview
 The `databricks_pdf_documentation` table is a managed table designed to hold metadata about various PDF documents that are part of the project's resources. It facilitates the full-text search capability, allowing for quick retrieval of documentation content based on user queries. The metadata includes unique identifiers, the document's URL, the extracted text content, and the document's content embeddings.
@@ -67,11 +67,11 @@ The table can be used to search for specific content within the documents. An ex
 
 ```sql
 SELECT url, content
-FROM `prod.my_mlops_project_luv_v6.databricks_pdf_documentation`
+FROM `prod.LLMOps.databricks_pdf_documentation`
 WHERE content LIKE '%desired_keyword%';
 ```
 
-## Table 2: `prod.my_mlops_project_luv_v6.pdf_raw`
+## Table 2: `prod.LLMOps.pdf_raw`
 
 ### Overview
 The `pdf_raw` table is a managed storage location for raw PDF files within the project. It contains the initial metadata about the documents before they are processed. This table is vital for the upstream data pipeline, serving as the first point of entry for PDF documents in the system.
@@ -84,10 +84,6 @@ The `pdf_raw` table is a managed storage location for raw PDF files within the p
   - `delta.lastUpdateVersion=9`
   - `delta.minReaderVersion=1`
   - `delta.minWriterVersion=2`
-- **Generation**: 9
-- **Created At**: 4/18/2024, 10:54:09 PM
-- **Created By**: maaheshwarispandan97@outlook.com
-- **Table Id**: 59c69acc-d2bc-43a1-a528-0b42bddbf2e2
 
 ### Schema
 The table consists of the following columns:
@@ -109,17 +105,17 @@ A sample of the data contained in the table is as follows (Note: actual binary c
 
 ### Lineage
 This table receives data from the following processes:
-- **Workflows**: `prod-my_mlops_project_luv_v6-model-training-job` for model training and data processing.
+- **Workflows**: `prod-LLMOps-model-training-job` for model training and data processing.
 - **Notebooks**:
   - `01`: Initial data processing notebook.
 
 ### Usage
 The table serves as the foundation for document processing pipelines. It is not directly queried for content retrieval but is used in data transformation jobs. An example transformation might involve extracting text from the `content` column to feed into a text analysis pipeline.
 
-## Table 3: `test.my_mlops_project_luv_v6.dbdemos_endpoint_advanced1_test_my_mlops_project_luv_v6_payload`
+## Table 3: `test.LLMOps.dbdemos_endpoint_advanced1_test_LLMOps_payload`
 
 ### Overview
-The `dbdemos_endpoint_advanced1_test_my_mlops_project_luv_v6_payload` table is designed to capture the payload data pertaining to the requests and responses handled by the advanced1 endpoint within the MLOps project. This includes detailed logging of client and Databricks request IDs, timestamps, request and response content, as well as execution metrics.
+The `dbdemos_endpoint_advanced1_test_LLMOps_payload` table is designed to capture the payload data pertaining to the requests and responses handled by the advanced1 endpoint within the MLOps project. This includes detailed logging of client and Databricks request IDs, timestamps, request and response content, as well as execution metrics.
 
 ### Details
 - **Type**: MANAGED
@@ -127,10 +123,6 @@ The `dbdemos_endpoint_advanced1_test_my_mlops_project_luv_v6_payload` table is d
 - **Properties**:
   - `delta.lastCommitTimestamp=1713499476698`
   - `delta.lastUpdateVersion=4`
-- **Generation**: Not specified
-- **Created At**: 4/18/2024, 9:20:45 PM
-- **Created By**: maaheshwarispandan97@outlook.com
-- **Table Id**: a2e176d1-c6ed-4fa1-add6-974a88ffd3f6
 
 ### Schema
 The table consists of the following columns:
@@ -166,15 +158,15 @@ SELECT
     date, 
     AVG(execution_time_ms) AS avg_execution_time 
 FROM 
-    `test.my_mlops_project_luv_v6.dbdemos_endpoint_advanced1_test_my_mlops_project_luv_v6_payload` 
+    `test.LLMOps.dbdemos_endpoint_advanced1_test_LLMOps_payload` 
 GROUP BY 
     date;
 ```
 
-## Table 4: `test.my_mlops_project_luv_v6.dbdemos_endpoint_advanced1_test_my_mlops_project_luv_v6_processed`
+## Table 4: `test.LLMOps.dbdemos_endpoint_advanced1_test_LLMOps_processed`
 
 ### Overview
-The `dbdemos_endpoint_advanced1_test_my_mlops_project_luv_v6_processed` table contains processed data from the advanced1 endpoint of the MLOps project. This table captures metrics and detailed data from model interactions, including inputs, outputs, and various calculated metrics such as toxicity, perplexity, token count, and readability indexes of the conversational content.
+The `dbdemos_endpoint_advanced1_test_LLMOps_processed` table contains processed data from the advanced1 endpoint of the MLOps project. This table captures metrics and detailed data from model interactions, including inputs, outputs, and various calculated metrics such as toxicity, perplexity, token count, and readability indexes of the conversational content.
 
 ### Details
 - **Type**: MANAGED
@@ -187,10 +179,6 @@ The `dbdemos_endpoint_advanced1_test_my_mlops_project_luv_v6_processed` table co
   - `delta.minReaderVersion=2`
   - `delta.columnMapping.mode=name`
   - `delta.columnMapping.maxColumnId=16`
-- **Generation**: 4
-- **Created At**: 4/18/2024, 9:49:40 PM
-- **Created By**: maaheshwarispandan97@outlook.com
-- **Table Id**: 5649e6b4-3734-4912-a71b-98f173893581
 
 ### Schema
 The table is structured with the following columns:
@@ -227,7 +215,7 @@ These notebooks are essential for processing and analyzing the data contained wi
 ### Usage
 The table is utilized for in-depth analysis of model performance and interaction quality. Metrics gathered here inform improvements and iterations on the model. An example use case could be analyzing the average toxicity of inputs and outputs over time to ensure conversational quality remains within acceptable boundaries.
 
-## Table 5: `prod.my_mlops_project_luv_v6_processed_drift_metrics`
+## Table 5: `prod.LLMOps_processed_drift_metrics`
 
 ### Overview
 This table is a managed dataset within the production environment that records and tracks metrics related to concept drift in model performance over time. It is used to monitor changes in data distribution or model behavior that may impact the effectiveness of predictive models.
@@ -240,9 +228,6 @@ This table is a managed dataset within the production environment that records a
   - `delta.lastUpdateVersion=0`
   - `delta.minReaderVersion=1`
   - `delta.minWriterVersion=2`
-- **Created At**: 4/18/2024, 9:58:49 PM
-- **Created By**: maaheshwarispandan97@outlook.com
-- **Table Id**: 05a4d97b-bf91-4ca7-9477-0941b56ba864
 
 ### Schema
 The schema is extensive and includes various metrics that capture the nature and extent of drift. For example, the `percent_null_delta` column measures the change in the proportion of null values for a particular feature, which is one of many indicators of potential drift in data.
@@ -255,19 +240,18 @@ While specific column descriptions are too numerous to list, the table is critic
 
 ```sql
 SELECT column_name, percent_null_delta
-FROM `prod.my_mlops_project_luv_v6_processed_drift_metrics`
+FROM `prod.LLMOps_processed_drift_metrics`
 WHERE percent_null_delta > 0.05;
 ```
 
 This query would identify columns where there has been a significant increase in null values, suggesting a need for investigation into data quality or model robustness.
 
-## Table 6: `prod.my_mlops_project_luv_v6.evaluation_dataset`
+## Table 6: `prod.LLMOps.evaluation_dataset`
 
 ### Overview
 The `evaluation_dataset` table contains data used for evaluating the performance of models within the project. It consists of a set of questions along with their corresponding answers, which can be used to test the accuracy and relevance of responses provided by the models.
 
 ### Details
-- **Owner**: maaheshwarispandan97@outlook.com
 
 ### Schema
 The table includes the following fields:
@@ -285,14 +269,14 @@ An example query to retrieve a sample question-answer pair for evaluation could 
 
 ```sql
 SELECT question, answer
-FROM `prod.my_mlops_project_luv_v6.evaluation_dataset`
+FROM `prod.LLMOps.evaluation_dataset`
 WHERE id = 123;
 ```
 
-## Table 7: `prod.my_mlops_project_luv_v6_processed_profile_metrics`
+## Table 7: `prod.LLMOps_processed_profile_metrics`
 
 ### Overview
-The `prod.my_mlops_project_luv_v6_processed_profile_metrics` table contains a comprehensive set of profile metrics collected from advanced model endpoints within the production environment. It's designed to capture a range of statistical parameters to monitor the characteristics of data processed by these models.
+The `prod.LLMOps_processed_profile_metrics` table contains a comprehensive set of profile metrics collected from advanced model endpoints within the production environment. It's designed to capture a range of statistical parameters to monitor the characteristics of data processed by these models.
 
 ### Details
 - **Type**: MANAGED
@@ -302,9 +286,6 @@ The `prod.my_mlops_project_luv_v6_processed_profile_metrics` table contains a co
   - `delta.lastUpdateVersion=0`
   - `delta.minReaderVersion=1`
   - `delta.minWriterVersion=2`
-- **Created At**: 4/19/2024, 3:00:34 AM
-- **Created By**: maaheshwarispandan97@outlook.com
-- **Table Id**: 77fd68ec-0d67-4f9f-99a6-ad421379fe43
 
 ### Schema
 This table's extensive schema includes columns for various measures such as `max_length`, `avg_length`, `percent_null`, `percent_zeros`, and `percent_distinct`, amongst others, which together provide a multi-dimensional view of the data profiles.
@@ -312,9 +293,9 @@ This table's extensive schema includes columns for various measures such as `max
 ### Lineage
 The profiling data is derived from upstream processed data and drift metrics tables, and feeds into further downstream analyses:
 - **Upstream**:
-  - `prod.my_mlops_project_luv_v6_processed`
+  - `prod.LLMOps_processed`
 - **Downstream**:
-  - `prod.my_mlops_project_luv_v6_processed_drift_metrics`
+  - `prod.LLMOps_processed_drift_metrics`
 
 ### Usage
 The table offers the capability to closely monitor data distributions and patterns, providing critical insights for data quality and model performance management. However, not all metrics are monitored actively as they may not all contribute meaningfully to performance insights.
