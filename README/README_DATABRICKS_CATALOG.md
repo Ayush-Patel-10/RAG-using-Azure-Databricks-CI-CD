@@ -11,14 +11,13 @@ Prod Environment..
 There are 8 tables for prod, with the lineages. 
 The 8 Tables are shown below:
 
-![Blank diagram (3)](https://github.com/luv91/my_mlops_project_luv_v6/assets/10795176/9d060738-3eb9-45d9-91ab-b50f5c0a3693)
-
+![image 1](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/127258950/a204a37c-1950-4ef7-b972-aea8646ad856)
 
 ## Lineage Graphs between the Tables are shown as below:
 
-![Blank diagram (1)](https://github.com/luv91/my_mlops_project_luv_v6/assets/10795176/d42137fd-d138-4e2f-8568-2bdc3d99dd7c)
+![image 2](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/127258950/9bad28a4-e2df-416c-aace-147a4e5bf7d8)
 
-![Blank diagram (2)](https://github.com/luv91/my_mlops_project_luv_v6/assets/10795176/2af050f1-0517-4b36-8ba7-9b6d7420578d)
+![image 3](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/127258950/f2069ecd-8c67-418a-800d-39f7fa5802d8)
 
 ## Table 1: `prod.my_mlops_project_luv_v6.databricks_pdf_documentation`
 
@@ -324,6 +323,3 @@ For example, while `percent_null` metrics offer insight into data completeness, 
 
 ### Note
 Due to the extensive nature of the metrics captured, only a subset that provides the most value is actively used in monitoring. This selective approach ensures focus on the most impactful metrics while maintaining the ability to expand the monitoring scope as needed.
-
-
-
