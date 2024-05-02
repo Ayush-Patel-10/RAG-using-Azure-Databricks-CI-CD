@@ -41,7 +41,8 @@ This table provides a detailed overview of each workflow file in the `.github/wo
 - **Trigger**: Pull requests (on specific paths), `workflow_dispatch`.
 - **Activity**: Runs unit and integration tests to validate code integrity and integration readiness, ensuring the codebase is reliable and functional.
 - **Details**: Typically runs in a test or staging environment within Databricks to validate the code before it moves to the actual staging process.
-![run-tests](https://github.com/luv91/my_mlops_project_luv_v6/assets/10795176/f52abd2a-63cc-489b-8075-638026531b01)
+  
+![image 3](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/127258950/121282da-2cc5-40e5-91f0-e350cfd6e48b)
 
 ### Deployment to Staging:
 - **Workflow**: `my_mlops_project_luv_v6-bundle-cd-staging.yml`
