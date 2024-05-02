@@ -4,12 +4,12 @@ This table provides a detailed overview of each workflow file in the `.github/wo
 
 | **Workflow File**                                                                 | **Trigger Events**                      | **Description**                                                                                                                                                 |
 |-----------------------------------------------------------------------------------|-----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [`deploy-cicd.yml`]                             | `workflow_dispatch`                     | Initializes and sets up CI/CD configurations for the project, including environment setups and automatic pull request creation for changes.                      |
-| [`lint-cicd-workflow-files.yml`]   | `pull_request`, `workflow_dispatch`     | Performs linting on GitHub Actions workflow files to ensure syntax correctness and prevent common configuration errors.                                         |
-| [`LLMOps-bundle-ci.yml`]       | `workflow_dispatch`, `pull_request`     | Validates MLOps bundle configurations ensuring all integration settings conform to required standards before merging into the main branch.                      |
-| [`LLMOps-run-tests.yml`]       | `pull_request` (on specific paths), `workflow_dispatch` | Conducts both unit tests and integration tests to validate code integrity and integration readiness, respectively, ensuring the codebase is reliable and functional. |
-| [`LLMOps-bundle-cd-staging.yml`] | `push` (to `main`), `workflow_dispatch` | Manages the deployment of project bundles to the staging environment, including validations and configurations to ensure deployment readiness.                   |
-| [`LLMOps-bundle-cd-prod.yml`]   | `push` (to `release`), `workflow_dispatch` | Handles the deployment of project bundles to the production environment, including final validations and configurations, facilitating continuous deployment.   |
+| `deploy-cicd.yml`                            | `workflow_dispatch`                     | Initializes and sets up CI/CD configurations for the project, including environment setups and automatic pull request creation for changes.                      |
+| `lint-cicd-workflow-files.yml`   | `pull_request`, `workflow_dispatch`     | Performs linting on GitHub Actions workflow files to ensure syntax correctness and prevent common configuration errors.                                         |
+| `LLMOps-bundle-ci.yml`       | `workflow_dispatch`, `pull_request`     | Validates MLOps bundle configurations ensuring all integration settings conform to required standards before merging into the main branch.                      |
+| `LLMOps-run-tests.yml`      | `pull_request` (on specific paths), `workflow_dispatch` | Conducts both unit tests and integration tests to validate code integrity and integration readiness, respectively, ensuring the codebase is reliable and functional. |
+| `LLMOps-bundle-cd-staging.yml` | `push` (to `main`), `workflow_dispatch` | Manages the deployment of project bundles to the staging environment, including validations and configurations to ensure deployment readiness.                   |
+| `LLMOps-bundle-cd-prod.yml`   | `push` (to `release`), `workflow_dispatch` | Handles the deployment of project bundles to the production environment, including final validations and configurations, facilitating continuous deployment.   |
 
 ## Workflow Process and Connection Overview
 
@@ -64,9 +64,9 @@ This table provides a detailed overview of each workflow file in the `.github/wo
 
 ![image 5](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/127258950/685f646d-3022-4672-961f-c6babf188775)
 
-## [Model Training Workflows Overview](https://github.com/luv91/LLMOps/blob/read/LLMOps/resources/model-workflow-resource.yml)
+## Model Training Workflows Overview
 
-The MLOps project utilizes several model training workflows defined in the [`model_resources.yml`](https://github.com/luv91/LLMOps/blob/read/LLMOps/resources/model-workflow-resource.yml) file. These workflows are integral to the CI/CD pipeline, ensuring that models are properly trained, evaluated, and deployed across different Databricks environments (test, staging, and production). Here's how these workflows are integrated within the GitHub Actions CI/CD setup:
+The MLOps project utilizes several model training workflows defined in the `model_resources.yml` file. These workflows are integral to the CI/CD pipeline, ensuring that models are properly trained, evaluated, and deployed across different Databricks environments (test, staging, and production). Here's how these workflows are integrated within the GitHub Actions CI/CD setup:
 
 ### Overview of Model Workflows
 
