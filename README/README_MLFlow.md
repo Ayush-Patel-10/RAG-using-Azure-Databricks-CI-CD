@@ -6,15 +6,11 @@ MLFlow is an integral part of our MLOps pipeline, providing model versioning, ma
 
 Our MLFlow setup includes several versions of the model, with detailed tracking of experiments and model performance metrics.
 
-![1__#$!@%!#__Pasted Graphic 1](https://github.com/luv91/my_mlops_project_luv_v6/assets/10795176/a708fd0f-0af6-412e-a061-2afdff863018)
-
 ![1](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/c1107b7b-9ddd-4dbd-99d2-ef70cc82790e)
 
 
 #### About Version 7
 Version 7 of the model is currently in the ready state and is serving predictions. This model incorporates improvements over previous versions and includes comprehensive logging of input and output schemas as well as detailed artifact storage.
-
-![1__#$!@%!#__Pasted Graphic 7](https://github.com/luv91/my_mlops_project_luv_v6/assets/10795176/f7ad28c3-0627-4c63-85de-8c9a9bfa698a)
 
 ![2](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/f82bbc6c-c635-4623-9ba4-0eca2e210925)
 
@@ -22,14 +18,10 @@ Version 7 of the model is currently in the ready state and is serving prediction
 #### Previous Versions
 Version 6, which was active before Version 7, is also documented to provide insights into the model's evolution and basis for improvements.
 
-![1__#$!@%!#__Pasted Graphic 3](https://github.com/luv91/my_mlops_project_luv_v6/assets/10795176/85e47c6c-bb12-4cfe-8e55-73221d709547)
-
 ![3](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/4a92ac48-196b-48a2-8522-a9a18578f04f)
 
 
 Version 6 has the following experimental details as shown:
-
-![1__#$!@%!#__Pasted Graphic 2](https://github.com/luv91/my_mlops_project_luv_v6/assets/10795176/75a2f24c-e0a0-4f76-b59e-e1efd07f0018)
 
 ![4](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/8b6c64a0-8d23-4a2d-8427-2aa51feea8b0)
 
@@ -73,8 +65,6 @@ The artifacts stored in MLFlow provide a detailed breakdown of the model compone
 
 Artifacts details are shown below:
 
-![1__#$!@%!#__Pasted Graphic 4](https://github.com/luv91/my_mlops_project_luv_v6/assets/10795176/097ee0d5-7561-4530-9a89-092b5117969c)
-
 ![5](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/d7dd507e-7f30-48ed-9bbe-8f80125627b1)
 
 
@@ -114,8 +104,6 @@ This configuration outlines the structure, environment, and dependencies require
 
 Overall details of Model Schema, MLFlow Model is shown:
 
-![1__#$!@%!#__Pasted Graphic 5](https://github.com/luv91/my_mlops_project_luv_v6/assets/10795176/eb9c2a72-6ba8-4afc-ab95-c77594760ee1)
-
 ![6](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/af455923-86e1-4d8c-99e5-f65e91a04103)
 
 
@@ -132,17 +120,9 @@ Once the production models are fully operational, they serve the advanced functi
 
 Model versioning in production is handled through the MLFlow model registry, where each model version is meticulously documented and stored. Below are the details of a typical model setup in production:
 
-![2__#$!@%!#__Pasted Graphic 5](https://github.com/luv91/my_mlops_project_luv_v6/assets/10795176/3101987f-6908-4f4e-841f-1b8668845e9e)
-
 ![7](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/db552772-8fcf-4798-89cc-22093c2d4d05)
 
-
-![2__#$!@%!#__Pasted Graphic 6](https://github.com/luv91/my_mlops_project_luv_v6/assets/10795176/fd83786e-8670-4091-91a9-2b7ea1ff1d8f)
-
 ![8](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/81ec3fd8-4ee2-4586-860e-ccd0f6b357f2)
-
-
-![2__#$!@%!#__Pasted Graphic 7](https://github.com/luv91/my_mlops_project_luv_v6/assets/10795176/958886b1-3a2e-438c-9d4d-3c1673b12707)
 
 ![9](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/f441c600-592d-4cf0-816f-760b2aa33cef)
 
@@ -195,4 +175,4 @@ prod_predictions = loaded_model.predict(prod_data)
 
 ## Model Version Rollback
 
-It is possible to revert to a previous version of a model in the production environment using MLFlow. For detailed steps on how to perform a model rollback, please refer to our [Model Version Rollback Guide](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/README/README_MODEL_VERSION_ROLLBACK.md).
+It is possible to revert to a previous version of a model in the production environment using MLFlow. For detailed steps on how to perform a model rollback, please refer to our [Model Version Rollback Guide](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/blob/main/README/README_MODEL_VERSION_ROLLBACK.md)
