@@ -1,6 +1,6 @@
-## Production Environment Structure for my_mlops_project_luv_v6
+## Production Environment Structure for LLMOps
 
-This document outlines the folder structure and CI/CD flow of the Databricks workspace for the `my_mlops_project_luv_v6` project.
+This document outlines the folder structure and CI/CD flow of the Databricks workspace for the `LLMOps` project.
 
 ## Directory Overview
 
@@ -10,7 +10,8 @@ Within the `.bundle` directory, the production environment is structured into se
 - `staging`: Contains files and artifacts that passed unit and integration tests from the `test` environment.
 - `prod`: Contains the production-ready files that have passed all stages of testing and review.
 
-![3__#$!@%!#__Pasted Graphic](https://github.com/luv91/my_mlops_project_luv_v6/assets/10795176/0d7d3478-81f0-49d4-a844-82fa4a0b9a79)
+![1](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/f12b7125-79f9-480f-b8d8-18426b0557c6)
+
 
 ## CI/CD Flow
 
@@ -25,7 +26,7 @@ Below is the repository structure outlining the key directories and files within
 ```plaintext
 .bundle/
 │
-├── my_mlops_project_luv_v6/ # GitHub project root folder
+├── LLMOps/ # GitHub project root folder
 │ ├── test/ # Testing environment with latest development files
 │ ├── staging/ # Staging environment with tested artifacts ready for production
 │ └── prod/ # Production environment with live, production-ready files
@@ -49,12 +50,12 @@ Below is the repository structure outlining the key directories and files within
 │         ├── metadata.json # Metadata related to the state management
 │         └── terraform.tfstate # Terraform's state file for infrastructure
 ```
+![2](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/e88d4f9c-f5e0-4cc5-bbbd-88e4da3a70e7)
+![3](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/950b0cd5-db11-4f28-b503-38c2bb443f25)
+![4](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/dc01b5c8-773c-4fc0-9349-7bd424a8e785)
 
-![image](https://github.com/luv91/my_mlops_project_luv_v6/assets/10795176/6ce3d283-ca5b-428e-92cf-7189588477f0)
 
-![image](https://github.com/luv91/my_mlops_project_luv_v6/assets/10795176/da278df7-c49e-4c31-a6ea-f88026473245)
 
-![image](https://github.com/luv91/my_mlops_project_luv_v6/assets/10795176/af41377d-3cdc-4d20-9a6a-d9d141419ae5)
 
 
 ## Notes
