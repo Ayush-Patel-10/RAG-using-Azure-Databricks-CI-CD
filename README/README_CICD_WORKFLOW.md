@@ -1,6 +1,4 @@
-## GitHub Workflows Overview 1
-
-Ayush
+## GitHub Workflows Overview
 
 This table provides a detailed overview of each workflow file in the `.github/workflows` directory, elaborating on the triggers and main functions of each workflow.
 
