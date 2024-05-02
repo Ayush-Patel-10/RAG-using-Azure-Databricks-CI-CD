@@ -45,8 +45,6 @@ With a resource group ready, proceed to create a Databricks workspace:
 3. **Create a Databricks Workspace**: Click "Create" and provide the necessary information, including name, subscription, resource group, location, and pricing tier.
 4. **Review and Create**: After filling out the details, click "Create".
 5. **Access Your Databricks Workspace**: Navigate to "All resources", find your Databricks workspace, and click to open it.
-<img width="1091" alt="image" src="https://github.com/luv91/my_mlops_project_luv_v6/assets/156069267/c0eb274e-32f9-4ad6-90b3-2cf02fffef0c">
-
 
 <img width="1091" alt="1" src="https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/5fe32f66-ef2b-4e9f-aad0-52f968bcec0f">
 
@@ -96,11 +94,8 @@ By completing these steps, you'll have a fully configured Metastore that is read
 1. Once metastore is created then navigate to compute. Click on the create compute on top right.
 2. Choose the required configurations and click on create compute.
 3. After creating click on view json to get cluster id
-<img width="807" alt="image" src="https://github.com/luv91/my_mlops_project_luv_v6/assets/156069267/a5e302c3-e7c8-4511-aba1-86e0160b98a6">
-
 
 <img width="807" alt="2" src="https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/7795cab2-1ad8-41da-b0b1-72c8fef01e57">
-
 
 
 ### Step 4.3: Creation of catalogs and schema and assigning permissions
@@ -112,18 +107,14 @@ By completing these steps, you'll have a fully configured Metastore that is read
     - (Optional) Specify a managed storage location if required, which also necessitates `CREATE MANAGED STORAGE` privilege on the target external location.
 4. **Set Permissions**:
     - Assign appropriate permissions for the schema, referencing Unity Catalog privileges and securable objects guidelines.
-<img width="721" alt="image" src="https://github.com/luv91/my_mlops_project_luv_v6/assets/156069267/8e8f1042-1626-4a6a-8735-9be7135d7881">
-
 
 <img width="721" alt="3" src="https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/0a87e9a6-1bcc-4c08-accc-44b47c39d65d">
-
 
 
 ### Step 4.4: Creating access tokens in Databricks
 1. **Access User Settings**: Open the Databricks workspace, go to the sidebar, click on your profile or user icon, and select 'User Settings'.
 2. **Generate Token**: Navigate to the 'Access Tokens' tab and click on 'Generate New Token'.
 3. **Save Token**: Enter a description, set the expiration time, click 'Generate', and then securely save the token that is displayed, as you won’t be able to see it again.
-<img width="941" alt="image" src="https://github.com/luv91/my_mlops_project_luv_v6/assets/156069267/1a72d719-88b5-4d3a-a7e4-5c1b3c38e6b5">
 
 <img width="941" alt="4" src="https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/112f45f6-37b9-4b4c-8d6d-d950037aa223">
 
@@ -139,8 +130,6 @@ CREATE SCHEMA IF NOT EXISTS schema_name COMMENT 'Description of schema purpose';
 ### Step 4.5: Installing libraries on Cluster
 
 We are manually installing all the required libraries while creating the cluster. Since, we can’t create a conda environment. As it is not supported on [Azure](https://learn.microsoft.com/en-us/azure/databricks/archive/legacy/conda).
-
-<img width="906" alt="image" src="https://github.com/luv91/my_mlops_project_luv_v6/assets/156069267/be70052c-15bd-43ae-a68c-2f5a0b308a79">
 
 
 <img width="906" alt="5" src="https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/421e4fd7-3254-4f40-94a6-2a8ccb94ee67">
@@ -189,8 +178,6 @@ We need to setup the following secrets and access tokens in our github repo on w
 10. **`WORKFLOW_TOKEN`**:
     - A fine-grained personal access token used within GitHub to authenticate and trigger workflow actions.
     - **How to Obtain**: Go to GitHub settings, navigate to Developer settings → Personal access tokens → Fine-grained tokens. Create a new token with the appropriate scopes required for your workflows.
-
-![image](https://github.com/luv91/my_mlops_project_luv_v6/assets/156069267/8409d0a6-7ea1-4c8c-a32d-202f2879c99a)
 
 ![6](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/3c5881cc-0fbc-4699-8402-7b6f348225f0)
 
