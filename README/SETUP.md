@@ -182,7 +182,7 @@ We need to setup the following secrets and access tokens in our github repo on w
 ![6](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/3c5881cc-0fbc-4699-8402-7b6f348225f0)
 
 
-# Project setup on loacl system Guide  
+# Project setup on local system Guide  
 
 ## Step 1: Installing Databricks CLI 
 
