@@ -6,51 +6,135 @@ This guide provides step-by-step instructions on setting up your Azure environme
 
 Before utilizing Azure services, including Azure Databricks, an Azure account is required. If you don't have one, follow these steps to create one:
 
-- Register for an Azure account by visiting the sign-up page, providing your details, verifying your identity, agreeing to terms, and waiting for account setup
-  (https://azure.com).
+1. **Go to the Azure Sign-up Page**: Navigate to the [Azure Portal sign-up page](https://azure.com).
+2. **Start the Sign-up Process**: Click on the "Start free" button to begin the account creation process.
+3. **Provide Your Details**: Fill in your personal information, including your name, email address, and phone number. You will also need to choose a verification method (either SMS or call) to verify your identity.
+4. **Verification**: Complete the verification process using the method you selected in the previous step.
+5. **Agreement and Subscription**: Read and agree to the Azure subscription agreement, offer details, and terms of use. Then, click "Sign up".
+6. **Wait for Account Setup**: Azure will take a few moments to set up your account. Once complete, you can access the Azure Portal.
 
 ## Step 2: Resource Group Creation inside Azure Account
 
-- After logging into the Azure Portal, navigate to "Resource Groups" from the navigation pane or search bar. Create a new resource group by clicking "Add" or
- "Create resource group," specify its details such as name, subscription, and region, then review your settings and confirm by clicking "Create." This container
-  will organize related resources for your Azure solutions.
-  
+A resource group is a container that holds related resources for an Azure solution. To create one:
+
+1. **Log into Azure Portal**: After setting up your Azure account, log in to the [Azure Portal](https://portal.azure.com).
+2. **Navigate to Resource Groups**: Find and select "Resource groups" from the navigation pane or use the search bar.
+3. **Create a Resource Group**: Click on "Add" or "Create resource group".
+4. **Specify Resource Group Details**: Enter a name, select your subscription, and choose the region for your resources.
+5. **Review and Create**: Review your settings and click "Create".
+
 ## Step 3: Creation of Storage Account (ADLS Gen2) inside the Resource Group
 
-- Begin by selecting "Create a resource" in the Azure Portal, then search for and create a "Storage account". In the "Basics" tab, provide details such as subscription, resource group, and region. Enable "Hierarchical namespace" under the "Advanced" tab to select the account type suitable for ADLS Gen2. Review your configurations and click "Create". Once created, access your storage account in the Azure Portal to manage and configure settings.
+To create an ADLS Gen2:
+
+1. **Create a Storage Account**: Select "Create a resource", search for "Storage account", and click "Create".
+2. **Specify Storage Account Details**: In the "Basics" tab, select your subscription and resource group. Enter a name and choose the same region as your resource group.
+3. **Select Account Type**: In the "Advanced" tab, enable "Hierarchical namespace".
+4. **Review and Create**: Adjust the remaining settings as necessary, then click "Review + Create" and "Create".
+5. **Access and Configure the Storage Account**: Navigate to your storage account from the Azure Portal to manage settings.
 
 ![1](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/506b0681-e248-4653-bbb1-d66d4d082f50)
 
+
 ## Step 4: Databricks Workspace Creation inside Resource Group
 
-- To create a Databricks workspace, start by opening the Azure Marketplace from your dashboard and selecting "Create a resource." Search for "Databricks" and choose "Azure Databricks." Click "Create," then input the required details such as name, subscription, resource group, location, and pricing tier. Review your input, then click "Create." Once created, access your Databricks workspace by navigating to "All resources," locating your workspace, and opening it.
+With a resource group ready, proceed to create a Databricks workspace:
+
+1. **Open the Azure Marketplace**: Go to "Create a resource" from the dashboard.
+2. **Search for Databricks**: Type "Databricks" and select "Azure Databricks".
+3. **Create a Databricks Workspace**: Click "Create" and provide the necessary information, including name, subscription, resource group, location, and pricing tier.
+4. **Review and Create**: After filling out the details, click "Create".
+5. **Access Your Databricks Workspace**: Navigate to "All resources", find your Databricks workspace, and click to open it.
 
 <img width="1091" alt="1" src="https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/5fe32f66-ef2b-4e9f-aad0-52f968bcec0f">
 
-#### Step 4.1: Setting Up Azure Blob Storage, Configuring Access, and Creating Metastore
 
-- Create Storage Infrastructure: Begin by creating a new ADLS Gen2 storage account in the Azure portal, enabling the hierarchical namespace as required. Within this storage account, create a container to hold the metadata and managed data for the Unity Catalog Metastore.
 
-- Set Up Access and Permissions: Establish an "Access Connector for Azure Databricks" in the Azure portal to serve as a managed identity for Databricks to access the storage container. Assign the 'Storage Blob Data Contributor' role to this connector using the IAM policy to ensure appropriate access levels.
+### 4.1. Meta Store Creation Inside Databricks
 
-- Configure Azure Databricks Workspace and Metastore: Create an Azure Databricks workspace, selecting a premium tier for access controls, and log in. Navigate to create a Metastore by specifying the name, region, and path of the ADLS Gen2 container. Input the access container ID and link the Metastore to the necessary Databricks workspace by assigning and enabling it through the workspace settings
+The Unity Catalog Metastore in Azure Databricks serves as a centralized repository for storing and managing metadata for various data objects. The following steps outline how to create and configure a Metastore with Azure Data Lake Storage Gen2 (ADLS Gen2) as the underlying storage.
 
-#### Step 4.2: Creation of Catalogs and Schema and Assigning Permissions
+#### Step 4.1.1: Configure Storage for Metastore
 
-- Navigate and Set Up Catalog: Click on the Catalog icon to access the Catalog section. Select the desired catalog from the pane on the left. Then, click 'Create schema' in the detail pane to initiate the setup. Enter the schema's name and, optionally, add a comment to describe its purpose. If necessary, specify a managed storage location, ensuring you have the required 'CREATE MANAGED STORAGE' privilege on the designated external location.
+**Create a storage Account ADLS Gen2** which will hold the metadata for Unity Catalog Metastore and the objects.
 
-- Assign Permissions to Schema: Establish appropriate permissions for the newly created schema by referencing Unity Catalog privileges and securable objects guidelines, ensuring secure and proper access management. All necessary permissions have been established, allowing user to customize settings according to their organization's specific requirements.
+#### Step 4.1.2: Create and Configure Metastore
 
-### Step 4.3: Creating access tokens in Databricks
+1. **Create a Storage Account**:
+    - Navigate to the Azure portal and create a new storage account.
+    - Ensure to enable the hierarchical namespace, which is a requirement for ADLS Gen2.
 
-- In the Databricks workspace, navigate to 'User Settings' via the sidebar, proceed to the 'Access Tokens' tab, generate a new token by entering a description and setting the expiration time, then securely save the token as it will not be displayed again.
+2. **Create a Storage Container**:
+    - Within the Storage Account, create a new container to store the Unity Catalog Metastore's metadata and managed data.
+
+3. **Set Up Databricks Access to Storage**:
+    - Create an "Access Connector for Azure Databricks" as a resource in the Azure portal, which serves as a managed identity for Databricks to access the storage container.
+    - Assign the role of 'Storage Blob Data Contributor' to the access connector using the IAM policy of the storage account.
+
+#### Step 4.1.3: Create Metastore through Databricks UI
+
+1. **Create an Azure Databricks Workspace**:
+    - While creating the workspace, choose a premium tier for role-based access controls.
+
+2. **Log in to the Workspace**:
+    - Access the Azure Databricks workspace using your credentials.
+
+3. **Navigate and Create Metastore**:
+    - Go to the data icon on the left panel and click on 'Create Metastore'.
+    - Provide a name for the metastore, select the region, and enter the path for the ADLS Gen2 container created in the earlier steps.
+    - Input the access container ID.
+    - Click 'Create' to finalize the metastore creation.
+
+4. **Link Metastore to Workspaces**:
+    - Assign the metastore to the required Databricks workspace by selecting the workspace, clicking 'Assign', and then 'Enable' to establish the linkage.
+
+By completing these steps, you'll have a fully configured Metastore that is ready for use with multiple Databricks workspaces, allowing for a more centralized and efficient management of data assets.
+
+### Step 4.2: Creating the cluster
+1. Once metastore is created then navigate to compute. Click on the create compute on top right.
+2. Choose the required configurations and click on create compute.
+3. After creating click on view json to get cluster id
+
+<img width="807" alt="2" src="https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/7795cab2-1ad8-41da-b0b1-72c8fef01e57">
+
+
+### Step 4.3: Creation of catalogs and schema and assigning permissions
+1. **Navigate to Catalog**: Click on the Catalog icon.
+2. **Select Catalog**: In the Catalog pane on the left, select the catalog where you wish to create the schema.
+3. **Create Schema**:
+    - Click `Create schema` in the detail pane.
+    - Enter a name for the schema and, optionally, a comment to describe its purpose.
+    - (Optional) Specify a managed storage location if required, which also necessitates `CREATE MANAGED STORAGE` privilege on the target external location.
+4. **Set Permissions**:
+    - Assign appropriate permissions for the schema, referencing Unity Catalog privileges and securable objects guidelines.
+
+<img width="721" alt="3" src="https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/0a87e9a6-1bcc-4c08-accc-44b47c39d65d">
+
+
+### Step 4.4: Creating access tokens in Databricks
+1. **Access User Settings**: Open the Databricks workspace, go to the sidebar, click on your profile or user icon, and select 'User Settings'.
+2. **Generate Token**: Navigate to the 'Access Tokens' tab and click on 'Generate New Token'.
+3. **Save Token**: Enter a description, set the expiration time, click 'Generate', and then securely save the token that is displayed, as you won’t be able to see it again.
 
 <img width="941" alt="4" src="https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/112f45f6-37b9-4b4c-8d6d-d950037aa223">
 
-### Step 4.4: Installing libraries on Cluster
 
-- We are manually installing all the required libraries while creating the cluster. Since, we can’t create a conda environment. As it is not supported on Azure[https://learn.microsoft.com/en-us/azure/databricks/archive/legacy/conda].
-  
+### Using SQL Commands
+
+Alternatively, schemas can be created using SQL commands in a Databricks notebook:
+
+```sql
+CREATE SCHEMA IF NOT EXISTS schema_name COMMENT 'Description of schema purpose';
+```
+
+### Step 4.5: Installing libraries on Cluster
+
+We are manually installing all the required libraries while creating the cluster. Since, we can’t create a conda environment. As it is not supported on [Azure](https://learn.microsoft.com/en-us/azure/databricks/archive/legacy/conda).
+
+
+<img width="906" alt="5" src="https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/421e4fd7-3254-4f40-94a6-2a8ccb94ee67">
+
+
 # Project Setup on Github Guide
 
 We need to setup the following secrets and access tokens in our github repo on which this code sits. These will help the github workflows to interact with Azure & databricks account to setup the CI-CD pipeline
@@ -97,7 +181,8 @@ We need to setup the following secrets and access tokens in our github repo on w
 
 ![6](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/3c5881cc-0fbc-4699-8402-7b6f348225f0)
 
-# Project setup on local system Guide  
+
+# Project setup on loacl system Guide  
 
 ## Step 1: Installing Databricks CLI 
 
