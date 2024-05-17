@@ -6,30 +6,22 @@ This guide provides step-by-step instructions on setting up your Azure environme
 
 Before utilizing Azure services, including Azure Databricks, an Azure account is required. If you don't have one, follow these steps to create one:
 
-1. Register for an Azure account by visiting the sign-up page, providing your details, verifying your identity, agreeing to terms, and waiting for account setup.[Azure Portal sign-up page](https://azure.com).
+- Register for an Azure account by visiting the sign-up page, providing your details, verifying your identity, agreeing to terms, and waiting for account setup.
+  [Azure Portal sign-up page](https://azure.com).
 
 ## Step 2: Resource Group Creation inside Azure Account
 
-A resource group is a container that holds related resources for an Azure solution. To create one:
-
-1. **Log into Azure Portal**: After setting up your Azure account, log in to the [Azure Portal](https://portal.azure.com).
-2. **Navigate to Resource Groups**: Find and select "Resource groups" from the navigation pane or use the search bar.
-3. **Create a Resource Group**: Click on "Add" or "Create resource group".
-4. **Specify Resource Group Details**: Enter a name, select your subscription, and choose the region for your resources.
-5. **Review and Create**: Review your settings and click "Create".
-
+- After logging into the Azure Portal, navigate to "Resource Groups" from the navigation pane or search bar. Create a new resource group by clicking "Add" or
+ "Create resource group," specify its details such as name, subscription, and region, then review your settings and confirm by clicking "Create." This container
+  will organize related resources for your Azure solutions.
+  
 ## Step 3: Creation of Storage Account (ADLS Gen2) inside the Resource Group
 
 To create an ADLS Gen2:
 
-1. **Create a Storage Account**: Select "Create a resource", search for "Storage account", and click "Create".
-2. **Specify Storage Account Details**: In the "Basics" tab, select your subscription and resource group. Enter a name and choose the same region as your resource group.
-3. **Select Account Type**: In the "Advanced" tab, enable "Hierarchical namespace".
-4. **Review and Create**: Adjust the remaining settings as necessary, then click "Review + Create" and "Create".
-5. **Access and Configure the Storage Account**: Navigate to your storage account from the Azure Portal to manage settings.
+- Begin by selecting "Create a resource" in the Azure Portal, then search for and create a "Storage account". In the "Basics" tab, provide details such as subscription, resource group, and region. Enable "Hierarchical namespace" under the "Advanced" tab to select the account type suitable for ADLS Gen2. Review your configurations and click "Create". Once created, access your storage account in the Azure Portal to manage and configure settings.
 
 ![1](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/506b0681-e248-4653-bbb1-d66d4d082f50)
-
 
 ## Step 4: Databricks Workspace Creation inside Resource Group
 
