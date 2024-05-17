@@ -6,8 +6,8 @@ This guide provides step-by-step instructions on setting up your Azure environme
 
 Before utilizing Azure services, including Azure Databricks, an Azure account is required. If you don't have one, follow these steps to create one:
 
-- Register for an Azure account by visiting the sign-up page, providing your details, verifying your identity, agreeing to terms, and waiting for account setup.
-  [Azure Portal sign-up page] (https://azure.com).
+- Register for an Azure account by visiting the sign-up page, providing your details, verifying your identity, agreeing to terms, and waiting for account setup
+  (https://azure.com).
 
 ## Step 2: Resource Group Creation inside Azure Account
 
