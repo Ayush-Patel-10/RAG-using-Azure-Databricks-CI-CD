@@ -17,25 +17,15 @@ Before utilizing Azure services, including Azure Databricks, an Azure account is
   
 ## Step 3: Creation of Storage Account (ADLS Gen2) inside the Resource Group
 
-To create an ADLS Gen2:
-
 - Begin by selecting "Create a resource" in the Azure Portal, then search for and create a "Storage account". In the "Basics" tab, provide details such as subscription, resource group, and region. Enable "Hierarchical namespace" under the "Advanced" tab to select the account type suitable for ADLS Gen2. Review your configurations and click "Create". Once created, access your storage account in the Azure Portal to manage and configure settings.
 
 ![1](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/506b0681-e248-4653-bbb1-d66d4d082f50)
 
 ## Step 4: Databricks Workspace Creation inside Resource Group
 
-With a resource group ready, proceed to create a Databricks workspace:
-
-1. **Open the Azure Marketplace**: Go to "Create a resource" from the dashboard.
-2. **Search for Databricks**: Type "Databricks" and select "Azure Databricks".
-3. **Create a Databricks Workspace**: Click "Create" and provide the necessary information, including name, subscription, resource group, location, and pricing tier.
-4. **Review and Create**: After filling out the details, click "Create".
-5. **Access Your Databricks Workspace**: Navigate to "All resources", find your Databricks workspace, and click to open it.
+- To create a Databricks workspace, start by opening the Azure Marketplace from your dashboard and selecting "Create a resource." Search for "Databricks" and choose "Azure Databricks." Click "Create," then input the required details such as name, subscription, resource group, location, and pricing tier. Review your input, then click "Create." Once created, access your Databricks workspace by navigating to "All resources," locating your workspace, and opening it.
 
 <img width="1091" alt="1" src="https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/5fe32f66-ef2b-4e9f-aad0-52f968bcec0f">
-
-
 
 ### 4.1. Meta Store Creation Inside Databricks
 
