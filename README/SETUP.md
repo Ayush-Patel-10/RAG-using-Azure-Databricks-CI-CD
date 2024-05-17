@@ -51,22 +51,6 @@ Before utilizing Azure services, including Azure Databricks, an Azure account is
 
 - We are manually installing all the required libraries while creating the cluster. Since, we can’t create a conda environment. As it is not supported on Azure[https://learn.microsoft.com/en-us/azure/databricks/archive/legacy/conda].
   
-### Using SQL Commands
-
-Alternatively, schemas can be created using SQL commands in a Databricks notebook:
-
-```sql
-CREATE SCHEMA IF NOT EXISTS schema_name COMMENT 'Description of schema purpose';
-```
-
-### Step 4.5: Installing libraries on Cluster
-
-We are manually installing all the required libraries while creating the cluster. Since, we can’t create a conda environment. As it is not supported on [Azure](https://learn.microsoft.com/en-us/azure/databricks/archive/legacy/conda).
-
-
-<img width="906" alt="5" src="https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/421e4fd7-3254-4f40-94a6-2a8ccb94ee67">
-
-
 # Project Setup on Github Guide
 
 We need to setup the following secrets and access tokens in our github repo on which this code sits. These will help the github workflows to interact with Azure & databricks account to setup the CI-CD pipeline
@@ -112,7 +96,6 @@ We need to setup the following secrets and access tokens in our github repo on w
     - **How to Obtain**: Go to GitHub settings, navigate to Developer settings → Personal access tokens → Fine-grained tokens. Create a new token with the appropriate scopes required for your workflows.
 
 ![6](https://github.com/Ayush-Patel-10/RAG-using-Azure-Databricks-CI-CD/assets/78248225/3c5881cc-0fbc-4699-8402-7b6f348225f0)
-
 
 # Project setup on local system Guide  
 
